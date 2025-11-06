@@ -125,6 +125,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "FrmRegistrar";
             Text = "Registrar";
+            Load += FrmRegistrar_Load;
             ResumeLayout(false);
             PerformLayout();
         }
