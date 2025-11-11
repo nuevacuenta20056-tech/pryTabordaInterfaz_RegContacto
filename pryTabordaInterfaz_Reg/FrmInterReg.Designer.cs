@@ -35,14 +35,15 @@
             txtContacto = new TextBox();
             mskTelefono = new MaskedTextBox();
             chklstResultado = new CheckedListBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // btnGrabar
             // 
-            btnGrabar.Location = new Point(229, 281);
+            btnGrabar.Location = new Point(270, 292);
             btnGrabar.Margin = new Padding(3, 4, 3, 4);
             btnGrabar.Name = "btnGrabar";
-            btnGrabar.Size = new Size(98, 60);
+            btnGrabar.Size = new Size(91, 35);
             btnGrabar.TabIndex = 1;
             btnGrabar.Text = "Grabar";
             btnGrabar.UseVisualStyleBackColor = true;
@@ -109,12 +110,23 @@
             chklstResultado.TabIndex = 7;
             chklstResultado.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
             // 
+            // button1
+            // 
+            button1.Location = new Point(148, 292);
+            button1.Name = "button1";
+            button1.Size = new Size(105, 35);
+            button1.TabIndex = 8;
+            button1.Text = "Limpiar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // FrmRegistrar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(391, 497);
+            Controls.Add(button1);
             Controls.Add(chklstResultado);
             Controls.Add(mskTelefono);
             Controls.Add(txtContacto);
@@ -138,5 +150,6 @@
         private TextBox txtContacto;
         private MaskedTextBox mskTelefono;
         private CheckedListBox chklstResultado;
+        private Button button1;
     }
 }

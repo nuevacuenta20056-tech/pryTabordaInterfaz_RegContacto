@@ -22,7 +22,7 @@ namespace pryTabordaInterfaz_Reg
             string contacto = txtContacto.Text.Trim();
             string telefono = mskTelefono.Text.Trim();
 
-            // Validación
+            // aca las validaciones de campos vacios
             if (string.IsNullOrWhiteSpace(contacto) || string.IsNullOrWhiteSpace(telefono))
             {
                 MessageBox.Show("Debe completar todos los campos para agregar el contacto.",
@@ -32,13 +32,13 @@ namespace pryTabordaInterfaz_Reg
                 return;
             }
 
-           //Validaciones
+            //validaciones del formato telefono
             string item = $"{contacto} - {telefono}";
 
-            // Agregar a la checklist
+            // utilizo este codigo para agregar a la checklist
             chklstResultado.Items.Add(item);
 
-            // Limpiar campos
+            //limpio los campos
             txtContacto.Clear();
             mskTelefono.Clear();
             txtContacto.Focus();
@@ -47,6 +47,19 @@ namespace pryTabordaInterfaz_Reg
         private void FrmRegistrar_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // limpia solo los campos
+            txtContacto.Clear();
+            mskTelefono.Clear();
+
+            // limpia los datos de la checkedlistBox
+            chklstResultado.Items.Clear();
+
+            //vuelvo al primer campo
+            txtContacto.Focus();
         }
     }
 }
